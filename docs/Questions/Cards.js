@@ -267,7 +267,7 @@ $(".Fiction-flip-card-6").click(function(){
 //////////////////////////////////////////////////////////////////////////////
 
 $(".logo-button-proceed").click(function(){
-    $(".logo-popup-text").html('<img src="/MPL/Images/dg.jpg" class="logo-answer"></img>');
+    $(".logo-popup-text").html('<img src="/MPL/docs/Images/dg.jpg" class="logo-answer"></img>');
     setTimeout(timerlogopopup,50000);
 })
 
