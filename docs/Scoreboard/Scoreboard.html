@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/Images/favicon.ico">
+
+        <title>Scoreboard</title>
+        
+        <!-- Bootstrap, 2 links and refer docs at bootstrap docs -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="ScoreboardStyles.css">
+
+        <!-- Font Awesome -->
+        <!-- For Icons in popups-->
+        <script src="https://kit.fontawesome.com/2582a48ab6.js" crossorigin="anonymous"></script>  
+        
+
+
+    </head>
+    <body>
+
+       <section class="navigation bar">        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="/Images/Logo.png" class="navbar-logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn-powerup">Powerup</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn-reset">Reset</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <div class="on-off">
+                      <div class="back2"></div>
+                      <div class="back"><span class="off">1x</span><span class="on">2x</span></div>
+                      <div class="front"></div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </section>
+
+       <h3 class="banner">Current Team Rankings</h3>
+
+       <!-- Scoreboard -->
+       <table>
+       <tr>
+        <th style="width:33%;">Serial No.</th>
+        <th style="width:33%;">Team Name</th>
+        <th style="width:33%;">Points</th>
+      </tr>
+      <tr class="tr-banded">
+        <td>1</td>
+        <td>VITitans</td>  
+        <!-- In between button and button closing tags is - and + or text to be shown in button -->
+        <td><button type="button" class="btn btn-danger score-negative-1">-</button><span id="score-1"></span><button type="button" class="btn btn-success score-positive-1">+</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Vikings</td>
+        <td><button type="button" class="btn btn-danger score-negative-2">-</button><span id="score-2"></span><button type="button" class="btn btn-success score-positive-2">+</button></td>
+      </tr>
+      <tr class="tr-banded">
+        <td>3</td>
+        <td>Chemists</td>
+        <td><button type="button" class="btn btn-danger score-negative-3">-</button><span id="score-3"></span><button type="button" class="btn btn-success score-positive-3">+</button></td>  
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Pirates</td>
+        <td><button type="button" class="btn btn-danger score-negative-4">-</button><span id="score-4"></span><button type="button" class="btn btn-success score-positive-4">+</button></td>
+      </tr>
+      <tr class="tr-banded">
+        <td>5</td>
+        <td>Mages & Magic</td>
+        <td><button type="button" class="btn btn-danger score-negative-5">-</button><span id="score-5"></span><button type="button" class="btn btn-success score-positive-5">+</button></td>
+      </tr>
+    </table>
+
+    <!-- Button going back and reset -->
+    <div class="container">
+      <div class="popup">
+        <!-- Font Awesome for the artwork/icons, i is icon tag -->
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h2>Warning!</h2>
+        <p>Proceeding will reset Score for all teams.</p>
+        <button type="button" class="btn btn-success btn-proceed">Proceed</button>
+        <button type="button" class="btn btn-danger btn-cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="popup1">
+        <i class="fa-solid fa-star"></i>
+        <h2>Congrats!!</h2>
+        <p class="powerup-text"></p>
+        <button type="button" class="btn btn-success btn-accept">Accept</button>
+      </div>
+    </div>
+
+      <!-- JS Link -->
+      <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
+      <script src="ScoreboardJS.js"></script>
+    
+    </body>
+</html>
